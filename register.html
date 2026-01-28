@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
        
     <style>
         *{
@@ -29,12 +29,13 @@
         .wrapper h1{
             font-size: 36px;
             text-align: center;
+            margin-bottom: 10px;
         }
         .wrapper .input-box{
             position: relative;
             width: 100%;
             height: 50px;
-            margin: 30px 0;
+            margin: 25px 0;
         }
         .wrapper .input-box label{
             display: block;
@@ -78,49 +79,82 @@
             font-size: 16px;
             color: #333;
             font-weight: 600;
+            text-decoration: none;
+            line-height: 45px;
         }
         .wrapper .btn:hover{
             background: #f0f0f0;
         }
         .wrapper .login-link{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-.wrapper .login-link a{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-.wrapper .login-link a:hover{
-    text-decoration: underline;
-}
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .wrapper .login-link a{
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .wrapper .login-link a:hover{
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
    <div class="wrapper">
-    <form action="dashboard.html" method="get">
-        <h1>Login</h1>
+    <form>
+        <h1>Register</h1>
+        
+        <div class="input-box">
+            <label for="fullname"><b>Full Name</b></label>
+            <input type="text" 
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your full name" required>
+            <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-box">
+            <label for="email"><b>Email</b></label>
+            <input type="email" 
+            id="email"
+            name="email"
+            placeholder="Enter your email" required>
+            <i class='bx bxs-envelope'></i>
+        </div>
+        
         <div class="input-box">
             <label for="uname"><b>Username</b></label>
             <input type="text" 
             id="uname"
             name="uname"
-            placeholder="Username" required>
-            <i class='bx bxs-user'></i>
+            placeholder="Choose a username" required>
+            <i class='bx bxs-user-circle'></i>
         </div>
+
         <div class="input-box">
             <label for="psw"><b>Password</b></label>
             <input type="password" 
             id="psw"
             name="psw"
-            placeholder="Password" required>
+            placeholder="Create a password" required>
             <i class='bx bxs-lock-alt'></i>
         </div>
-        <button type="submit" class="btn">Login</button>
+
+        <div class="input-box">
+            <label for="psw-repeat"><b>Confirm Password</b></label>
+            <input type="password" 
+            id="psw-repeat"
+            name="psw-repeat"
+            placeholder="Confirm your password" required>
+            <i class='bx bxs-lock'></i>
+        </div>
+
+        <a href="login.html" class="btn">Register</a>
+        
         <div class="login-link">
-    <p>Don't have an account? <a href="register.html">Register here</a></p>
-</div>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
     </form>
    </div>
 </body>
